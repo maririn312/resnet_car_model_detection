@@ -3,6 +3,6 @@ cars=['mercedes','toyota','ferrari','tesla','volkswagen','bugatti','rolls royce'
 try:
     for i in range (len(cars)):
         meow.download(cars[i], limit= 3)
-        print("Images of "+cars[i]+" downloaded successfully")    
+        print("Машины загвар "+cars[i]+" амжилттай даталаа")    
 except:
-    print("Error downloading files")    
+    print("Алдаа заалаа")    

@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Car Brand Detection</title>
+    <title>Машиний загвар ялгалт</title>
 
     <style>
-      body{
+      body {
         height: 400px;
-       width: 100%;
-       background-image: url('/static/mw.jpg')
+        width: 100%;
+        background-image: url("/static/mw.jpg");
       }
-      
+
       h1 {
         margin: 0 auto;
         margin-top: 5rem;
@@ -60,7 +60,7 @@
         justify-content: center;
       }
 
-      a{
+      a {
         display: block;
         width: 45%;
         height: 45px;
@@ -78,89 +78,50 @@
         align-items: center;
         justify-content: center;
       }
-      
     </style>
   </head>
 
   <body>
-    <h1>Car Brand Detection</h1>
+    <h1>Машин загвар танилт</h1>
 
     <br />
-    <!-- <br />
-    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-    <p><img id="output" width="200" /></p>
-    <br />
-     -->
-      
+
     <div class="image-preview-container">
       <div class="preview">
         <img id="preview-selected-image" />
       </div>
-      <label for="upload">Upload Image</label>
+      <label for="upload">Зураг оруулах</label>
       <form method="POST" action="/detect" enctype="multipart/form-data">
-      <input
-        type="file"
-        name="upload"
-        id="upload"
-        accept="image/*"
-        onchange="previewImage(event);"
-      />
-      <input type="submit"/>
-      <a onclick="this.parentNode.submit();">click here</a>
-    </form>
-  
-    
+        <input
+          type="file"
+          name="upload"
+          id="upload"
+          accept="image/*"
+          onchange="previewImage(event);"
+        />
+        <input type="submit" />
+        <a onclick="this.parentNode.submit();">Илгээх</a>
+      </form>
     </div>
-    <!-- <img src="{{url_for('static', filename='mw.jpg')}}" align="middle" /> -->
-    <!-- 
-    <br />
-    <label for="image">Select an image(optional):</label>
-    <input type="file" name="image" id="image" />
-    <br /> -->
   </body>
 
   <script>
-    /**
-     * Create an arrow function that will be called when an image is selected.
-     */
     const previewImage = (event) => {
-      /**
-       * Get the selected files.
-       */
       const imageFiles = event.target.files;
-      /**
-       * Count the number of files selected.
-       */
+
       const imageFilesLength = imageFiles.length;
-      /**
-       * If at least one image is selected, then proceed to display the preview.
-       */
+
       if (imageFilesLength > 0) {
-        /**
-         * Get the image path.
-         */
         const imageSrc = URL.createObjectURL(imageFiles[0]);
-        /**
-         * Select the image preview element.
-         */
+
         const imagePreviewElement = document.querySelector(
-          "#preview-selected-image"
+          "#preview-selected-image",
         );
-        /**
-         * Assign the path to the image preview element.
-         */
+
         imagePreviewElement.src = imageSrc;
-        /**
-         * Show the element by changing the display value to "block".
-         */
+
         imagePreviewElement.style.display = "block";
       }
     };
-
-    // var loadFile = function(event) {
-    //     var image = document.getElementById('output');
-    //     image.src = URL.createObjectURL(event.target.files[0]);
-    // };
   </script>
 </html>
