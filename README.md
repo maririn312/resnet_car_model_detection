@@ -17,7 +17,7 @@ To run the application, follow the steps below:
 git clone https://github.com/abhijeet-shankar/car-model-detection.git
 ```
 
-2. Install the necessary dependencies:
+2. Install the necessary dependencies in your local pc and google colab:
 
 ````bash
 pip install -r requirements.txt
