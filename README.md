@@ -16,7 +16,7 @@ To run the application, follow the steps below:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/abhijeet-shankar/car-model-detection.git
+git clone https://github.com/maririn312/resnet_car_model_detection
 ```
 
 2. Install the necessary dependencies in your local pc and google colab:
